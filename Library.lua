@@ -2991,7 +2991,17 @@ function Library:CreateWindow(...)
         Position = UDim2.new(0, 7, 0, 0);
         Size = UDim2.new(0, 0, 0, 25);
         Text = Config.Title or '';
-        TextXAlignment = Enum.TextXAlignment.Left;
+        TextXAlignment = Enum.TextXAlignment.Center;
+        ZIndex = 1;
+        Parent = Inner;
+    });
+    
+    local Game = Library:CreateLabel({
+        Position = UDim2.new(0, 7, 0, 0);
+        TextColor3 = Color3.new(180,0,0)
+        Size = UDim2.new(0, 0, 0, 25);
+        Text = Config.Game or '';
+        TextXAlignment = Enum.TextXAlignment.Right;
         ZIndex = 1;
         Parent = Inner;
     });
