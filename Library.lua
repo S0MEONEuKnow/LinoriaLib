@@ -2997,11 +2997,13 @@ function Library:CreateWindow(...)
         Parent = Inner;
     });
     
-    local Game = Library:CreateLabel({
-        Position = UDim2.new(0, -7, 0, 0);
-        TextColor3 = Color3.fromRGB(175,0,0);
-        Size = UDim2.new(1, 0, 0, 25);
-        Text = Config.Game or '';
+    local Game = = Library:Create('TextLabel', {
+        BackgroundTransparency = 1;
+        Text = Config.Game or '',
+        Font = Library.Font;
+        TextColor3 = Library.FontColor;
+        TextSize = 16;
+        TextStrokeTransparency = 0;
         TextXAlignment = Enum.TextXAlignment.Right;
         ZIndex = 1;
         Parent = Inner;
