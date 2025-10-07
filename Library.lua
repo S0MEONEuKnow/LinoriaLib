@@ -148,7 +148,7 @@ function Library:CreateLabel(Properties, IsHud)
     local _Instance = Library:Create('TextLabel', {
         BackgroundTransparency = 1;
         Font = Library.Font;
-        TextColor3 = Library.FontColor;
+        TextColor3 = Properties.TextColor3 or Library.FontColor;
         TextSize = 16;
         TextStrokeTransparency = 0;
     });
@@ -2997,18 +2997,16 @@ function Library:CreateWindow(...)
         Parent = Inner;
     });
     
-    local Game = = Library:Create('TextLabel', {
-        BackgroundTransparency = 1;
-        Text = Config.Game or '',
-        Font = Library.Font;
-        TextColor3 = Library.FontColor;
-        TextSize = 16;
-        TextStrokeTransparency = 0;
+    local Game = Library:CreateLabel({
+        Position = UDim2.new(0, 0, 0, 0);
+        Size = UDim2.new(1, 0, 0, 25);
+        Text = Config.Game or '';
+        TextColor3 = Color3.fromRGB(180,0,0);
         TextXAlignment = Enum.TextXAlignment.Right;
         ZIndex = 1;
         Parent = Inner;
     });
-
+    
     local MainSectionOuter = Library:Create('Frame', {
         BackgroundColor3 = Library.BackgroundColor;
         BorderColor3 = Library.OutlineColor;
