@@ -2998,7 +2998,7 @@ function Library:CreateWindow(...)
     });
     
     local Game = Library:CreateLabel({
-        Position = UDim2.new(0, 0, 0, 0);
+        Position = UDim2.new(0, -7, 0, 0);
         Size = UDim2.new(1, 0, 0, 25);
         Text = Config.Game or '';
         TextColor3 = Color3.fromRGB(180,0,0);
