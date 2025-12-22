@@ -3005,7 +3005,7 @@ function Library:CreateWindow(...)
         TextXAlignment = Enum.TextXAlignment.Right;
         ZIndex = 1;
         Parent = Inner;
-    ),false}
+    },false)
     
     local MainSectionOuter = Library:Create('Frame', {
         BackgroundColor3 = Library.BackgroundColor;
