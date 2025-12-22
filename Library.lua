@@ -147,7 +147,7 @@ end;
 function Library:CreateLabel(Properties, IsHud)
     local ApplySettings = Properties.ApplySettings or true
     Properties.ApplySettings = true
-    table.remove(Properties,"ApplySettings")
+    table.remove(Properties,#Properties)
     
     local _Instance = Library:Create('TextLabel', {
         BackgroundTransparency = 1;
