@@ -2997,15 +2997,14 @@ function Library:CreateWindow(...)
         Parent = Inner;
     });
     
-    local Game = Library:CreateLabel({
-        Position = UDim2.new(0, -7, 0, 0);
-        Size = UDim2.new(1, 0, 0, 25);
-        Text = Config.Game or '';
-        TextColor3 = Color3.fromRGB(180,0,0);
-        TextXAlignment = Enum.TextXAlignment.Right;
-        ZIndex = 1;
-        Parent = Inner;
-    });
+    local Game = Instance.new("TextLabel")
+    Game.Position = UDim2.new(0, -7, 0, 0);
+    Game.Size = UDim2.new(1, 0, 0, 25);
+    Game.Text = Config.Game or '';
+    Game.TextColor3 = Color3.fromRGB(180,0,0);
+    Game.TextXAlignment = Enum.TextXAlignment.Right;
+    Game.ZIndex = 1;
+    Game.Parent = Inner;
     
     local MainSectionOuter = Library:Create('Frame', {
         BackgroundColor3 = Library.BackgroundColor;
