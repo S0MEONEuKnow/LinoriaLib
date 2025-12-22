@@ -145,7 +145,7 @@ function Library:ApplyTextStroke(Inst)
 end;
 
 function Library:CreateLabel(Properties, IsHud, ApplySettings)
-    ApplySettings = ApplySettings or true
+    if ApplySettings == nil then ApplySettings = true end
     
     local _Instance = Library:Create('TextLabel', {
         BackgroundTransparency = 1;
