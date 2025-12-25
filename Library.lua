@@ -2688,7 +2688,7 @@ do
     Library.NotificationArea = Library:Create('Frame', {
         BackgroundTransparency = 1;
         Position = UDim2.new(0.5, 0,1, -200);
-        AnchorPoint = UDim.new(0.5,1);
+        AnchorPoint = Vector2.new(0.5,1);
         Size = UDim2.new(0, 300, 0, 200);
         ZIndex = 100;
         Parent = ScreenGui;
